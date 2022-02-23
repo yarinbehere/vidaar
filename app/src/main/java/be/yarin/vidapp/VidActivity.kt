@@ -67,7 +67,7 @@ class VidActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vid)
-        hideSystemBars()
+//        hideSystemBars()
         val extras = intent.extras
         if (extras != null) {
             vidId = extras.getString("vidid")
@@ -89,15 +89,15 @@ class VidActivity : YouTubeBaseActivity(), YouTubePlayer.OnInitializedListener {
         }
     }
 
-    private fun hideSystemBars() {
-        val windowInsetsController =
-            ViewCompat.getWindowInsetsController(window.decorView) ?: return
-        // Configure the behavior of the hidden system bars
-        windowInsetsController.systemBarsBehavior =
-            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        // Hide both the status bar and the navigation bar
-        windowInsetsController.hide(WindowInsetsCompat.Type.statusBars())
-    }
+//    private fun hideSystemBars() {
+//        val windowInsetsController =
+//            ViewCompat.getWindowInsetsController(window.decorView) ?: return
+//        // Configure the behavior of the hidden system bars
+//        windowInsetsController.systemBarsBehavior =
+//            WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+//        // Hide both the status bar and the navigation bar
+//        windowInsetsController.hide(WindowInsetsCompat.Type.statusBars())
+//    }
 
     override fun onInitializationSuccess(
         provider: YouTubePlayer.Provider?,
